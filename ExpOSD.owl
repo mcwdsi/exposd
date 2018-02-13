@@ -1,0 +1,589 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/amandahicks/ontologies/2013/9/untitled-ontology-56#"
+     xml:base="http://www.semanticweb.org/amandahicks/ontologies/2013/9/untitled-ontology-56"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd">
+        <owl:imports rdf:resource="&obo;iao.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000076 -->
+
+    <rdfs:Datatype rdf:about="&obo;NCSO.owl/NCSO_00000076">
+        <rdfs:label xml:lang="en">yes</rdfs:label>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000077 -->
+
+    <rdfs:Datatype rdf:about="&obo;NCSO.owl/NCSO_00000077">
+        <rdfs:label xml:lang="en">no</rdfs:label>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000010 -->
+
+    <owl:ObjectProperty rdf:about="&obo;NCSO.owl/EXPOSD_00000010">
+        <rdfs:label xml:lang="en">exposed to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000000 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000000">
+        <rdfs:label xml:lang="en">body mass index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000118 xml:lang="en">BMI</obo:IAO_0000118>
+        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Quetelet index</obo:IAO_0000118>
+        <obo:IAO_0000115 xml:lang="en">The body mass index is data item for human body shape based on an individual&apos;s mass and height. It is calculated by dividing the mass by the height to the power of two. Typically, it is given in kg/m2.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000001 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000001">
+        <rdfs:label xml:lang="en">general health data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000002 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000002">
+        <rdfs:label xml:lang="en">general health surrogate data</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                        <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000000"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                        <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;NCSO.owl/EXPOSD_00000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000003 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000003">
+        <rdfs:label xml:lang="en">linear growth measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000004 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000004">
+        <rdfs:label xml:lang="en">observation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000005 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000005">
+        <rdfs:label xml:lang="en">observation of smoking materials in home</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;NCSO.owl/EXPOSD_00000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;NCSO.owl/EXPOSD_00000010"/>
+                        <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000009"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000006 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000006">
+        <rdfs:label xml:lang="en">questionnaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000007 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000007">
+        <rdfs:label xml:lang="en">smoking history questionnaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;NCSO.owl/EXPOSD_00000006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;NCSO.owl/EXPOSD_00000010"/>
+                        <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000009"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000008 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000008">
+        <rdfs:label xml:lang="en">nicotine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/EXPOSD_00000009 -->
+
+    <owl:Class rdf:about="&obo;NCSO.owl/EXPOSD_00000009">
+        <rdfs:label xml:lang="en">tobacco smoke</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000011 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000011">
+        <rdfs:label xml:lang="en">Plastic Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000012 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000012">
+        <rdfs:label xml:lang="en">Bottlefeeding Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000013 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000013">
+        <rdfs:label xml:lang="en">Glass Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000014 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000014">
+        <rdfs:label xml:lang="en">Breastfeeding Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000015 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000015">
+        <rdfs:label xml:lang="en">Breast Milk Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000016 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000016">
+        <rdfs:label xml:lang="en">Breast Milk Expression Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000017 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000017">
+        <rdfs:label xml:lang="en">Lactation Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000018 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000018">
+        <rdfs:label xml:lang="en">Tobacco Smoke Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000019 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000019">
+        <rdfs:label xml:lang="en">Cow Milk Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000020 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000020">
+        <rdfs:label xml:lang="en">Employment Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000021 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000021">
+        <rdfs:label xml:lang="en">Failure To Thrive Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000022 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000022">
+        <rdfs:label xml:lang="en">Neonate Feeding Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000023 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000023">
+        <rdfs:label xml:lang="en">Formula Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000024 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000024">
+        <rdfs:label xml:lang="en">Income Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000025 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000025">
+        <rdfs:label xml:lang="en">Government Assistance Health Care Plan Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000026 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000026">
+        <rdfs:label xml:lang="en">Health Care Plan Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000027 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000027">
+        <rdfs:label xml:lang="en">Milk Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000028 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000028">
+        <rdfs:label xml:lang="en">Money Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000029 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000029">
+        <rdfs:label xml:lang="en">Stress Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000030 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000030">
+        <rdfs:label xml:lang="en">Expressed Breast Milk Exposure Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000031 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000031">
+        <rdfs:label xml:lang="en">Government Assistance Income Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000032 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000032">
+        <rdfs:label xml:lang="en">WIC Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amandahicks/ontologies/exposd/EXPOSD_00000034">
+        <rdfs:label xml:lang="en">Socio Economic Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000066 -->
+
+    <owl:NamedIndividual rdf:about="&obo;NCSO.owl/NCSO_00000066">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000007"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000000"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000003"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label xml:lang="en">AAA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000067 -->
+
+    <owl:NamedIndividual rdf:about="&obo;NCSO.owl/NCSO_00000067">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000007"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000000"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label xml:lang="en">AAB</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000068 -->
+
+    <owl:NamedIndividual rdf:about="&obo;NCSO.owl/NCSO_00000068">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000007"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000003"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label xml:lang="en">AAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000069 -->
+
+    <owl:NamedIndividual rdf:about="&obo;NCSO.owl/NCSO_00000069">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;NCSO.owl/EXPOSD_00000005"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;IAO_0000004"/>
+                                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/NCSO_00000076"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000003"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label xml:lang="en">AAD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000070 -->
+
+    <owl:NamedIndividual rdf:about="&obo;NCSO.owl/NCSO_00000070">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000000"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000003"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label xml:lang="en">AAE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000071 -->
+
+    <owl:NamedIndividual rdf:about="&obo;NCSO.owl/NCSO_00000071">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000005"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000003"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCSO.owl/EXPOSD_00000000"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:label xml:lang="en">AAF</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCSO.owl/NCSO_00000074 -->
+
+    <owl:NamedIndividual rdf:about="&obo;NCSO.owl/NCSO_00000074">
+        <rdfs:label xml:lang="en">no</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
